@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const API_URL = "http://localhost:3333/leads";
+    const API_URL = "https://tmr-backend.onrender.com/leads";
 
     const form = document.querySelector("form.mbr-form.form-with-styler");
     if (!form) return console.error("TMR: form não encontrado");
