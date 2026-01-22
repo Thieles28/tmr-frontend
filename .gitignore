@@ -1,0 +1,20 @@
+# Node (se existir por algum motivo)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.local
+
+# Mobirise (arquivos locais do editor)
+.mobirise/
+.mobirise.lock
+*.mobirise
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
