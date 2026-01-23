@@ -58,6 +58,24 @@ document.addEventListener("DOMContentLoaded", () => {
         scheduleHideAlerts(8000);
     }
 
+    function toggleButtonIfHasContent() {
+        const hasAllValues =
+            nameInput?.value.trim() &&
+            emailInput?.value.trim() &&
+            phoneInput?.value.trim() &&
+            messageInput?.value.trim().length > 10;
+
+        btn.disabled = !hasAllValues;
+    }
+
+    [nameInput, emailInput, phoneInput, messageInput].forEach((el) => {
+        el.addEventListener("input", toggleButtonIfHasContent);
+        el.addEventListener("change", toggleButtonIfHasContent);
+    });
+
+    btn.disabled = true;
+    toggleButtonIfHasContent();
+
     btn.addEventListener("click", async (e) => {
         e.preventDefault();
         e.stopPropagation();
